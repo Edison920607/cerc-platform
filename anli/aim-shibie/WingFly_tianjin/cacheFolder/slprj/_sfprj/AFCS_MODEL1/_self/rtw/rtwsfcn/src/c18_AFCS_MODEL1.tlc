@@ -1,0 +1,84 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   11 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c18_AFCS_MODEL1"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c18_AFCS_MODEL1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Climb"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Climb"\
+    }\
+    ChartData {\
+      Name         "is_active_AltitudeControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Climb.PositionControl.AltitudeControl"\
+    }\
+    ChartData {\
+      Name         "is_XYPositionControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Climb.PositionControl.XYPositionControl"\
+    }\
+    ChartData {\
+      Name         "is_active_XYPositionControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Climb.PositionControl.XYPositionControl"\
+    }\
+    ChartData {\
+      Name         "is_PositionControl1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Climb.PositionControl.XYPositionControl.PositionControl1"\
+    }\
+    ChartData {\
+      Name         "is_YrwControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Climb.PositionControl.XYPositionControl.PositionControl1.YrwControl"\
+    }\
+    ChartData {\
+      Name         "is_active_ThrustControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Climb.PositionControl.ThrustControl"\
+    }\
+    ChartData {\
+      Name         "CountClimb1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountClimb1"\
+    }\
+    ChartData {\
+      Name         "CountPhiLControl1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountPhiLControl1"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

@@ -1,0 +1,9 @@
+{
+  "scripts": [
+    ".\\command\\FHY\\com-M300.py",
+    ".\\command\\FHY\\cmd-test.py",
+    ".\\command\\M300 point control\\comnew-M300-sub.py",
+    ".\\command\\M300 point control\\comnew-M300-pub.py",
+    ".\\command\\M300-pubnew-mult.py"
+  ]
+}

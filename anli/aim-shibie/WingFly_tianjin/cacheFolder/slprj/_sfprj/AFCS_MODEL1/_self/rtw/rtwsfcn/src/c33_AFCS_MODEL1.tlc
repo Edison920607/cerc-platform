@@ -1,0 +1,42 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   4 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c33_AFCS_MODEL1"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c33_AFCS_MODEL1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_AltCalibration"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "AltCalibration"\
+    }\
+    ChartData {\
+      Name         "CountAltCal"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountAltCal"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

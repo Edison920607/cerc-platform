@@ -1,0 +1,9 @@
+{
+  "scripts": [
+    ".\\WingFly yonghu\\FW-pubnew.py",
+    ".\\WingFly_tianjin\\comnew-FW-sub.py",
+    ".\\command\\M300 point control\\comnew-M300-sub.py",
+    ".\\command\\M300 point control\\comnew-M300-pub.py",
+    ".\\command\\M300-pubnew-mult.py"
+  ]
+}

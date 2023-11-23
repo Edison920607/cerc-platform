@@ -1,0 +1,54 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   6 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c23_AFCS_MODEL1"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c23_AFCS_MODEL1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Pre_Takeoff"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Pre_Takeoff"\
+    }\
+    ChartData {\
+      Name         "CountFix"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountFix"\
+    }\
+    ChartData {\
+      Name         "CountTakeoff"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountTakeoff"\
+    }\
+    ChartData {\
+      Name         "CountUnFix"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountUnFix"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

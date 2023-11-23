@@ -1,0 +1,84 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   11 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c19_AFCS_MODEL1"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c19_AFCS_MODEL1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_AltitudeControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Cruise.AltitudeControl"\
+    }\
+    ChartData {\
+      Name         "is_active_AltitudeControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Cruise.AltitudeControl"\
+    }\
+    ChartData {\
+      Name         "is_AltControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Cruise.AltitudeControl.AltControl"\
+    }\
+    ChartData {\
+      Name         "is_PhiControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Cruise.PhiControl"\
+    }\
+    ChartData {\
+      Name         "is_active_PhiControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Cruise.PhiControl"\
+    }\
+    ChartData {\
+      Name         "is_ThrustControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Cruise.ThrustControl"\
+    }\
+    ChartData {\
+      Name         "is_active_ThrustControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Cruise.ThrustControl"\
+    }\
+    ChartData {\
+      Name         "is_active_fmphaseTranse"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Cruise.fmphaseTranse"\
+    }\
+    ChartData {\
+      Name         "CountCruise1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountCruise1"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

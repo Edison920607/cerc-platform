@@ -1,0 +1,198 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   30 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "is_active_c20_AFCS_MODEL1"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_c20_AFCS_MODEL1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "is_Landing"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing"\
+    }\
+    ChartData {\
+      Name         "is_active_AltitudeControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Landing.Pre_Land.AltitudeControl"\
+    }\
+    ChartData {\
+      Name         "is_XYPositionControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.Pre_Land.XYPositionControl"\
+    }\
+    ChartData {\
+      Name         "is_active_XYPositionControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Landing.Pre_Land.XYPositionControl"\
+    }\
+    ChartData {\
+      Name         "is_YrwControl1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.Pre_Land.XYPositionControl.YrwControl1"\
+    }\
+    ChartData {\
+      Name         "is_GoAround"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.GoAround"\
+    }\
+    ChartData {\
+      Name         "is_active_AltitudeControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.AltitudeControl"\
+    }\
+    ChartData {\
+      Name         "is_XYPositionControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.XYPositionControl"\
+    }\
+    ChartData {\
+      Name         "is_active_XYPositionControl"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.XYPositionControl"\
+    }\
+    ChartData {\
+      Name         "is_NormYrwControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.XYPositionControl.NormYrwControl"\
+    }\
+    ChartData {\
+      Name         "is_YrwControl1"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.XYPositionControl.NormYrwControl.YrwControl1"\
+    }\
+    ChartData {\
+      Name         "is_EmYrwControl"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.XYPositionControl.EmYrwControl"\
+    }\
+    ChartData {\
+      Name         "is_YrwControl11"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Landing.GoAround.FlightMode.XYPositionControl.EmYrwControl.YrwControl11"\
+    }\
+    ChartData {\
+      Name         "CountLand1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountLand1"\
+    }\
+    ChartData {\
+      Name         "CountLand2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountLand2"\
+    }\
+    ChartData {\
+      Name         "CountLand3"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountLand3"\
+    }\
+    ChartData {\
+      Name         "CountLand4"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountLand4"\
+    }\
+    ChartData {\
+      Name         "CountPhiLControl1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountPhiLControl1"\
+    }\
+    ChartData {\
+      Name         "HrefLand"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "HrefLand"\
+    }\
+    ChartData {\
+      Name         "CountLand6"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountLand6"\
+    }\
+    ChartData {\
+      Name         "CountLand5"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountLand5"\
+    }\
+    ChartData {\
+      Name         "NumCount"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "NumCount"\
+    }\
+    ChartData {\
+      Name         "FmToNorm"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "FmToNorm"\
+    }\
+    ChartData {\
+      Name         "CountPhiLControl2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountPhiLControl2"\
+    }\
+    ChartData {\
+      Name         "CountApproach2"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountApproach2"\
+    }\
+    ChartData {\
+      Name         "CountApproach1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountApproach1"\
+    }\
+    ChartData {\
+      Name         "CountPhiLControl3"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "CountPhiLControl3"\
+    }\
+    ChartData {\
+      Name         "fmtoLand"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "fmtoLand"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
